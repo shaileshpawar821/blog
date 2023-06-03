@@ -1,0 +1,25 @@
+{% include 'core/header.html' %} 
+
+<div class="postcrearte">
+  <center><h1>Login<h1></center>
+  
+    <form method="post" >
+    {% csrf_token %}
+    <table align="center" bgcolor="pink" height="80%" width="25%">
+      <tr>
+        <th><label for="{{ form.username.id_for_label }}">username:</label></th>
+        <td>{{ form.username }}</td>
+      </tr>
+      <tr>
+        <th><label for="{{ form.password.id_for_label }}">password:</label></th>
+        <td>{{ form.password }}</td>
+      </tr>
+    </table>
+    <br>
+      <center><button type="submit" class="btn btn-primary">Login</button></center>
+  </form>
+  <br>
+   <center><p>Don't have an account? <a href="{% url 'register_view' %}">Register here</a></p></center>
+  </div>
+  </body>
+  </html>

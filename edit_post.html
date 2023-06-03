@@ -1,0 +1,16 @@
+{% include 'core/header.html' %} 
+
+<center><h1>Update your post<h1></center> 
+
+<form method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" bgcolor="pink" height="80%" width="25%">
+        {{ form.as_table }}
+      </table>
+      <br>
+      <center><button type="submit" class="btn btn-primary">Update</button></center>
+</form>
+</body>
+</html>
+  
+  

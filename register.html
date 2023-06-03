@@ -1,0 +1,21 @@
+{% include 'core/header.html' %} 
+
+<center><h1>Register<h1></center>
+
+    <form method="post">
+        {% csrf_token %}
+        <table align="center" bgcolor="pink" height="80%" width="25%">
+          {{ form.as_table }}
+        </table>
+        <br>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+    <br>
+    <center><p>Already have an account? <a href="{% url 'login_view' %}">Login here</a></p></center>
+  </br>
+</div>
+</body>
+</html>
+
+
+    

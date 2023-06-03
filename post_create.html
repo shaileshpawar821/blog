@@ -1,0 +1,40 @@
+{% include 'core/header.html' %} 
+
+<div class="postcrearte">
+<center><h2>Create your post<h2></center>
+
+<form method="post" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table align="center" bgcolor="pink" height="80%" width="25%">
+    <tr>
+      <th><label for="{{ form.title.id_for_label }}">Title:</label></th>
+      <td>{{ form.title }}</td>
+    </tr>
+    <tr>
+      <th><label for="{{ form.content.id_for_label }}">Content:</label></th>
+      <td>{{ form.content }}</td>
+    </tr>
+    <tr>
+      <th><label for="{{ form.author.id_for_label }}">Author:</label></th>
+      <td>{{ form.author }}</td>
+    </tr>
+    <tr>
+      <th><label for="{{ form.content.id_for_label }}">image:</label></th>
+      <td>{{ form.image }}</td>
+    </tr>
+    <tr>
+      <th><label for="{{ form.published_date.id_for_label }}">Published date: </label></th>
+      <td>{{ form.published_date }}</td>
+    </tr>
+
+    <tr>
+      <th><label for="{{ form.is_published.id_for_label }}">Is published: </label></th>
+      <td>{{ form.is_published }}</td>
+    </tr>
+  </table>
+  <br>
+    <center><button type="submit" class="btn btn-primary">Submit</button></center>
+</form>
+</div>
+</body>
+</html>
